@@ -22,7 +22,8 @@ char char_lower(char c);
 size_t contains(char* str, char* sub_str);
 char* compress(char* str);
 char* strip(char* str);
-//count, replace, strip, split, compress
+size_t count(char* str, char* sub_str);
+//count, replace, split
 
 //extra diff
 // get_string()
@@ -30,7 +31,7 @@ char* strip(char* str);
 
 int main()
 {
-    char* str = "bob  g   ";
+    char* str = "  bob  g   ";
     char* sub_str = "hello";
     
     printf("input: %s\n", str);
@@ -41,6 +42,7 @@ int main()
     printf("sub str: %lu\n", contains(str, sub_str));
     printf("compress: %s\n", compress(str));
     printf("strip: %s\n", strip(str));
+    printf("count: %lu\n", count("bob bob baob", "bob"));
 
     //free(str);
     //you thought I would free? Fool! 
@@ -169,10 +171,9 @@ size_t contains(char* str, char* sub_str){
 
 char* compress(char* str){
     size_t length = str_len(str);
-    char* new_str = malloc(sizeof(char) * length + 1);
     size_t j;
     size_t k = 0;
-    
+    char* new_str = malloc(sizeof(char) * length + 1);
     if (new_str == NULL){
         return NULL;
     }
@@ -191,30 +192,61 @@ char* compress(char* str){
 }
 
 char* strip(char* str){
-
-    //TODO: unfinished functionality / doesn't work
-    
+    size_t start = 0;
     size_t length = str_len(str);
     char* new_str = malloc((sizeof(char) * length) + 1);
     if (new_str == NULL){
         return NULL;
     }
-    
-    for (size_t j = length; j > 0; j--){
+    //remove them fuckers
+    for (size_t j = (length - 1); j > 0; j--){
         if (str[j] != ' '){
             break;
         }
         length--;
     }
-    
-    printf("strip_new_len: %lu\n", length);
-    
+
     for (size_t j = 0; j < length; j++){
         if (str[j] != ' '){
-        
+            start = j;
             break;
         }
     }
-    
+
+    for (size_t j = start; j < length; j++){
+        new_str[j - start] = str[j];
+    }
+    new_str[length - start] = '\0';
     return new_str;
+}
+
+size_t count(char* str, char* sub_str){
+    size_t length = str_len(str);
+    size_t sub_length = str_len(sub_str);
+    size_t j = 0;
+    size_t result = 0;
+    size_t substr_count = 0;
+
+    for (size_t j = 0; j <= (length - sub_length); j++){
+        size_t k = 0;
+        while (k < sub_length && str[j + k] == sub_str[k]){
+            k++;
+        }
+        if (k == sub_length){
+            result++;
+        }
+    }
+    return result;
+}
+
+char* replace(char* str, char* sub_str, size_t amount){
+    //TODO
+}
+
+char* reverse_only_words(char* str){
+    //TODO
+}
+
+char* split(char* str, char* splitter){
+    //TODO
 }
