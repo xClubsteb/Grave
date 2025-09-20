@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <!-- TODO: Add multiple choice question here -->
+
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                    <ol>
+                        <h3>Which function grows the fastest as x increases?</h3>
+                        <li id="question1">                          
+                            <button id="q1-btn1" class="btn">x*log(x)</button>
+                            <button id="q1-btn2" class="btn">log(x)</button>
+                            <button id="q1-btn3" class="btn">x^2</button>
+                            <button id="q1-btn4" class="btn">x+1</button>
+                            <p id="q1-p"></p>  
+                        </li>
+                    </ol>
+                    <ol>
+                        <h3>Which one is correct way to print Hello world in language C?</h3>
+                        <li id="question2">
+                            <button id="q2-btn1" class="btn"><code>printf("Hello world");</code></button>
+                            <button id="q2-btn2" class="btn"><code>print("Hello world")</code></button>
+                            <button id="q2-btn3" class="btn"><code>cout << "Hello world";</code></button>
+                            <button id="q2-btn4" class="btn"><code>console.log("Hello world")</code></button>
+                            <p id="q2-p"></p>
+                        </li>
+                    </ol>
+            </div>
+
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                    <ol id="response_section">
+                        <li>
+                            <h3>What is the second biggest continent on Earth?</h3>
+                            <input autocomplete="off" type="text" placeholder="Answer:" id="user_input">
+                            <button id="submit" class="btn">Confirm</button>
+                            <p id="p-response"></p>
+                        </li>
+                    </ol>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
