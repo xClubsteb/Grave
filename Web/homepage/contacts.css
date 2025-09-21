@@ -1,0 +1,109 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #6898b8;
+    gap: 10px; 
+}
+
+.lists-remove {
+    display: flex   ;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#icons {
+    display: flex;       /* makes list items horizontal instead of stacked */
+    gap: 20px;           /* space between the icons */
+    list-style: none;    /* remove bullets */
+    padding: 0;          /* remove default padding */
+    margin: 0;           /* remove default margin */
+}
+
+#footer-btn {
+    padding: 5px 10px;
+    display: flex;          
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    border: none;
+    background-color: #6789ad;
+    color: white;
+    cursor: pointer;
+    border-radius: 16px;
+}
+#footer-btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-nav {
+    display: inline-block;
+    background-color: #60606b9c;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 16px;
+}
+
+.btn-nav:hover {
+    background-color: #8d5f5f;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #808f9e;
+}
+
+header {
+  min-height: 60px;
+  background: #6898b8;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+footer-left {
+    color: white;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    line-height: normal;
+}
+#footer {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    min-height: 50px;
+    background-color: #6898b8;
+    padding: 0 20px;
+    gap: 10px; 
+}
+
+.copy-btn {
+    background-color: #6789ad;
+    border-radius: 16px;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+#discord-tag {
+    height: 90px;
+    width: 90px;
+}

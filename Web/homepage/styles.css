@@ -1,8 +1,8 @@
 nav {
-    display: flex;               /* make children flex items */
-    justify-content: center;     /* horizontal centering */
-    align-items: center;         /* vertical centering */
-    height: 60px;                /* nav bar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     background-color: #6898b8;
     gap: 10px; 
 }
@@ -24,6 +24,7 @@ ol li{
     padding: 10px 25px;
     text-decoration: none;
     color: white;
+    border-radius: 16px;
 }
 
 .btn-nav:hover {
@@ -45,8 +46,8 @@ header {
 
 #footer {
     display: grid;
-    grid-template-columns: 1fr auto; /* left text + button on right */
-    align-items: center;              /* vertical centering of all items */
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
     min-height: 50px;
     background-color: #6898b8;
     padding: 0 20px;
@@ -63,25 +64,26 @@ footer-left {
 #footer-btn {
     padding: 5px 10px;
     display: flex;          
-    align-items: center;    /* center text vertically inside button */
-    justify-content: center; /* center text horizontally inside button */
-    justify-self: end;       /* align button to right */
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
     border: none;
     border-radius: 5px;
     background-color: #6789ad;
     color: white;
     cursor: pointer;
+    border-radius: 16px;
 }
 #footer-btn:hover {
     background-color: #0056b3;
 }
 main {
     display: flex;
-    justify-content: center; /* horizontal centering */
-    align-items: center;     /* vertical centering inside main */
-    flex-direction: column;  /* stack h1, p vertically */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
-    text-align: center;      /* optional: center text itself */
+    text-align: center;
     
 }
 
