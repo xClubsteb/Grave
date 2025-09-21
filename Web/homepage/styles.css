@@ -7,10 +7,27 @@ nav {
     gap: 10px; 
 }
 
+#question2 {
+    background-color: #6898b8;
+}
+#question3 {
+    background-color: #6898b8;
+}
+
+ol li{
+    list-style: none;
+}
+
 .btn-nav {
     display: inline-block;
-    background-color: red;
+    background-color: #60606b9c;
     padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-nav:hover {
+    background-color: #8d5f5f;
 }
 
 body {
@@ -43,7 +60,7 @@ footer-left {
     line-height: normal;
 }
 
-.footer-btn {
+#footer-btn {
     padding: 5px 10px;
     display: flex;          
     align-items: center;    /* center text vertically inside button */
@@ -55,7 +72,7 @@ footer-left {
     color: white;
     cursor: pointer;
 }
-.footer-btn:hover {
+#footer-btn:hover {
     background-color: #0056b3;
 }
 main {
@@ -66,4 +83,23 @@ main {
     padding: 20px;
     text-align: center;      /* optional: center text itself */
     
+}
+
+#Blue {
+    color:#0056b3;
+}
+#Brown {
+    color: #5e3c0a;
+}
+
+#Blue, #Brown {
+    font-size: 1.1em; /* slightly bigger than normal text */
+    font-weight: 500; /* optional: makes it subtly stand out */
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover span {
+    text-decoration: underline;
 }
