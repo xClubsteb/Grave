@@ -53,7 +53,7 @@ header {
     padding: 0 20px;
     gap: 10px; 
 }
-footer-left {
+#footer-left {
     color: white;
     justify-self: start;
     align-self: center;
